@@ -1,24 +1,54 @@
 {
     "name": "m4rc377/packages",
-    "description": "testing packages",
-    "type": "library",
-    "keywords": ["testing", "test", "testoh"],
+    "description": "deskripsi paket",
+    "keywords": [
+        "m4rc377",
+        "packages"
+    ],
     "homepage": "https://github.com/m4rc377/packages",
     "license": "MIT",
+    "type": "library",
     "authors": [
         {
-            "name": "m4rc377",
-            "email": "email@mail.il"
+            "name": "Marshel Aldhi",
+            "email": "email@mail.com",
+            "role": "Developer"
         }
     ],
     "require": {
-        "php": ">=7.0.0",
-        "laravel/framework": ">=5.5"
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "~6.0"
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
     },
     "autoload": {
-            "M4rc3ll\\Packages\\": "src/"
+        "psr-4": {
+            "M4rc377\\Packages\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "M4rc377\\Packages\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "M4rc377\\Packages\\PackagesServiceProvider"
+            ],
+            "aliases": {
+                "Packages": "M4rc377\\Packages\\PackagesFacade"
+            }
+        }
     }
 }
