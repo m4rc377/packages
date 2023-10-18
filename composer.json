@@ -1,27 +1,22 @@
 {
     "name": "m4rc377/packages",
-    "description": "Media manager for laravel",
+    "description": "testing packages",
     "type": "library",
-    "keywords": ["laravel-admin", "media", "manager"],
+    "keywords": ["testing", "test", "testoh"],
     "homepage": "https://github.com/m4rc377/packages",
     "license": "MIT",
     "authors": [
         {
             "name": "m4rc377",
-            "email": "m4r@ce.ll"
+            "email": "email@mail.il"
         }
     ],
     "require": {
-        "php": ">=7.0.0",
-        "encore/laravel-admin": "~1.6"
     },
     "require-dev": {
         "phpunit/phpunit": "~6.0"
     },
     "autoload": {
-        "psr-4": {
-            "Encore\\Admin\\Media\\": "src/"
-        }
     },
     "extra": {
         "laravel": {
